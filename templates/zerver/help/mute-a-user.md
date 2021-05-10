@@ -1,42 +1,44 @@
 # Mute a user
 
 !!! tip ""
-    This feature works on an individual basis. In case of a user seriously
-    violating the code of conduct of your community, consider requesting
-    your organization administrator to [deactivate](/help/deactivate-or-reactivate-a-user)
-    them instead.
+    This feature mutes a user from your personal perspective, and does not
+    alert administrators. Only organization [owners and
+    administrators](http://localhost:9991/help/roles-and-permissions) can
+    [deactivate users](/help/deactivate-or-reactivate-a-user).
 
-
-To deal with annoying or troublesome users, you can mute them. Muting someone will
+You can mute any user you do not wish to interact with. Muting someone will
 have the following effects:
 
-- The user you muted will not know that they have been muted, and muting will
-  not affect their user experience in any way.
+- All messages sent by a muted user will automatically be [marked as
+  read](/help/marking-messages-as-read) for you, and will never generate any
+  desktop, push or email notifications.
 
-- All messages sent by a muted user will automatically be
-  [marked as read](/help/marking-messages-as-read) for you, and will never generate
-  any desktop, push or email notifications.
+- Muted users will be excluded from the list of users in the right sidebar, the
+  [**Private messages**](/help/private-messages) list, and from the
+  [mentions](/help/mention-a-user-or-group) autocomplete for you.
 
-- Muted users will be excluded from the right sidebar, the
-  [private conversations](/help/private-messages) list, and from the
-  [mentions](/help/mention-a-user-or-group) autocomplete for you. Other UI like
-  the [reactions list](/help/emoji-reactions#see-who-reacted-to-a-message) will show
-  **Muted user** as placeholder text instead of the muted user's actual username.
+- In other places where you might encounter the muted user (e.g. [list of users
+  who reacted with an emoji](/help/emoji-reactions#see-who-reacted-to-a-message)),
+  their name will be replaced with **Muted user**. Note that all menus (e.g. list
+  of stream subscribers) will continue to display the muted user's name.
+
+!!! tip ""
+    The user you muted will not know that they have been muted.
 
 
 ### Messages sent by muted users
 
-Messages sent by muted users are hidden in your message feed in the following manner:
+Messages sent by muted users are hidden in your message feed:
 
-- Stream messages, and group private messages sent by muted users are hidden under a
-  **Click to reveal** banner. The sender's profile picture, sender's name, and the content
-  of the message will be hidden until you reveal the message by clicking on it.
+- Stream messages and group private messages sent by muted users are hidden under a
+  **Click to reveal** banner. The sender's profile picture, sender's name, and message content
+  will be hidden until you reveal the message by clicking on it.
 
-- Private messages between you and a user you have muted will not be visible anywhere
-  in the UI, unless you specifically [search](/help/search-for-messages) for them.
+- Private messages between you and a user you have muted will not be visible
+  unless you specifically [search](/help/search-for-messages) for them.
 
-- The message will not be highlighted even if it mentions you, but it will still
-  appear in the mentions tab.
+- If a muted user [mentions](/help/mention-a-user-or-group) you, the message will not be
+  highlighted, but will still appear in the **Mentions** tab.
 
 
 ### From the message view
@@ -45,9 +47,9 @@ Messages sent by muted users are hidden in your message feed in the following ma
 
 1. Click on a user's profile picture or [mention](/help/mention-a-user-or-group).
 
-1. Click on **Mute this user**.
+1. Click **Mute this user**.
 
-1. On the confirmation popup, click on **Confirm**.
+1. On the confirmation popup, click **Confirm**.
 
 {end_tabs}
 
@@ -60,9 +62,9 @@ Messages sent by muted users are hidden in your message feed in the following ma
 1. Click on the ellipsis (<i class="zulip-icon zulip-icon-ellipsis-v-solid"></i>) to
   the right of their name.
 
-1. Click on **Mute this user**.
+1. Click **Mute this user**.
 
-1. On the confirmation popup, click on **Confirm**.
+1. On the confirmation popup, click **Confirm**.
 
 {end_tabs}
 
