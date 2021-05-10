@@ -31,6 +31,8 @@ Zulip has many features designed to simplify moderation:
 
 * [Ban (deactivate) users](/help/deactivate-or-reactivate-a-user) acting in
   bad faith. You can reactivate them later if they repent.
+* [Mute users](/help/mute-a-user) to hide messages and block notifications
+  from them.
 * Use the `streams:public sender:user@example.com`
   [search operators](/help/search-for-messages) to find all messages sent by a user.
 * Delete messages, [archive streams](/help/archive-a-stream), and
@@ -46,8 +48,6 @@ Zulip has many features designed to simplify moderation:
 
 * **Delete spammer**. This will wipe the user from your Zulip, by deleting
   all their messages and reactions, banning them, etc.
-* **Mute user**. This will allow an individual user to hide the messages of
-  another individual user.
 * **New users join as guests**. This will allow users joining via open
   registration to have extremely limited permissions by default, but still
   enough permissions to ask the core team a question or to get a feel for your
