@@ -14,9 +14,10 @@ tools.
 
 No chat product comes even close to Zulip in terms of enabling serious
 discussion, engaging remote participants, spreading knowledge to neighboring
-teams, and making efficient use of managers’ time.
+teams, and making efficient use of managers’ time. Learn more about the
+advantages of Zulip's unique threading model [here](/why-zulip). 
 
-If you haven’t read [why Zulip](/why-zulip), read that first. We’ve also
+We’ve also
 collected a list of features we think will be of particular interest for
 companies using Zulip.
 
