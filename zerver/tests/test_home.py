@@ -1,4 +1,5 @@
 import calendar
+import datetime
 import urllib
 from datetime import timedelta
 from typing import Any
@@ -251,6 +252,78 @@ class HomeTest(ZulipTestCase):
         actual_keys = sorted(str(k) for k in page_params.keys())
 
         self.assertEqual(actual_keys, self.expected_page_params_keys)
+
+        # TODO: Inspect the page_params data further.
+        # print(orjson.dumps(page_params, option=orjson.OPT_INDENT_2).decode())
+        realm_bots_expected_keys = [
+            "api_key",
+            "avatar_url",
+            "bot_type",
+            "default_all_public_streams",
+            "default_events_register_stream",
+            "default_sending_stream",
+            "email",
+            "full_name",
+            "is_active",
+            "owner_id",
+            "services",
+            "user_id",
+        ]
+
+        realm_bots_actual_keys = sorted(str(key) for key in page_params["realm_bots"][0].keys())
+        self.assertEqual(realm_bots_actual_keys, realm_bots_expected_keys)
+
+    def test_home_demo_org(self) -> None:
+        # Keep this list sorted!!!
+        html_bits = [
+            "start the conversation",
+            "Loading...",
+            # Verify that the app styles get included
+            "app-stubentry.js",
+            "data-params",
+        ]
+
+        realm = get_realm("zulip")
+        realm.demo_organization_scheduled_deletion_date = realm.date_created + datetime.timedelta(
+            days=30
+        )
+        realm.save()
+        self.login("hamlet")
+
+        # Create bot for realm_bots testing. Must be done before fetching home_page.
+        bot_info = {
+            "full_name": "The Bot of Hamlet",
+            "short_name": "hambot",
+        }
+        self.client_post("/json/bots", bot_info)
+
+        # Verify succeeds once logged-in
+        flush_per_request_caches()
+        with queries_captured() as queries:
+            with patch("zerver.lib.cache.cache_set") as cache_mock:
+                result = self._get_home_page(stream="Denmark")
+                self.check_rendered_logged_in_app(result)
+        self.assertEqual(
+            set(result["Cache-Control"].split(", ")), {"must-revalidate", "no-store", "no-cache"}
+        )
+
+        self.assert_length(queries, 43)
+        self.assert_length(cache_mock.call_args_list, 5)
+
+        html = result.content.decode()
+
+        for html_bit in html_bits:
+            if html_bit not in html:
+                raise AssertionError(f"{html_bit} not in result")
+
+        page_params = self._get_page_params(result)
+
+        actual_keys = sorted(str(k) for k in page_params.keys())
+        expected_keys = self.expected_page_params_keys + [
+            "demo_organization_scheduled_deletion_date"
+        ]
+
+        self.assertEqual(set(actual_keys), set(expected_keys))
 
         # TODO: Inspect the page_params data further.
         # print(orjson.dumps(page_params, option=orjson.OPT_INDENT_2).decode())
