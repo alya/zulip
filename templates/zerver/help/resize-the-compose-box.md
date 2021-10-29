@@ -14,7 +14,7 @@ With the compose box opened
 
 With the compose box expanded.
 
-* Click on the **chevron down (<i class="fa fa-chevron-up"></i>) icon** located at
+* Click on the **chevron down (<i class="fa fa-chevron-down"></i>) icon** located at
   the top right corner of the compose box.
 
 ## Stretch the compose box
