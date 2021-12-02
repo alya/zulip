@@ -31,10 +31,10 @@ can close the compose box using `Esc`, or up/down arrow if the box is empty.
 
 ## Related articles
 
-* [Resize the compose box](/help/resize-the-compose-box)
 * [Getting started with Zulip](/help/getting-started-with-zulip)
 * [Starting a new topic](/help/starting-a-new-topic)
 * [Starting a new private thread](/help/starting-a-new-private-thread)
 * [Replying to messages](/help/replying-to-messages)
 * [Messaging tips & tricks](/help/messaging-tips)
 * [Keyboard shortcuts](/help/keyboard-shortcuts)
+* [Resize the compose box](/help/resize-the-compose-box)

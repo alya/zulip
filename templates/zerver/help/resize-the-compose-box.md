@@ -1,36 +1,39 @@
 # Resize the compose box
 
-The Zulip compose box when opened is small in size by default, leaving most of the vertical
-space for the message feed. The Zulip compose box can be resized as follows.
+When composing a long message, it can be helpful to expand the compose box to
+display more text and avoid distractions. Note that the compose box also stretches automatically when you
+type a long message.
 
 ## Expand the compose box
 
-With the compose box opened
+{start_tabs}
 
-* Click on the **chevron up (<i class="fa fa-chevron-up"></i>) icon** located at
-  the top right corner of the compose box.
+{!start-composing.md!}
+
+1. Click on the **<i class="fa fa-chevron-up"></i> icon** in the top
+   right corner of the compose box.
+
+{end_tabs}
 
 ## Collapse the compose box
 
-With the compose box expanded.
+{start_tabs}
 
-* Click on the **chevron down (<i class="fa fa-chevron-down"></i>) icon** located at
-  the top right corner of the compose box.
+1. With the compose box in the expanded state, click on the **<i class="fa
+   fa-chevron-down"></i> icon** in the top right corner of the compose box.
+
+{end_tabs}
 
 ## Stretch the compose box
 
-With the compose box opened.
+{start_tabs}
 
-* Click and drag the bottom right corner of the compose box.
+{!start-composing.md!}
 
+1. Click and drag the bottom right corner of the compose box.
 
+{end_tabs}
 
 ## Related articles
 
 * [Open the compose box](/help/open-the-compose-box)
-* [Getting started with Zulip](/help/getting-started-with-zulip)
-* [Starting a new topic](/help/starting-a-new-topic)
-* [Starting a new private thread](/help/starting-a-new-private-thread)
-* [Replying to messages](/help/replying-to-messages)
-* [Messaging tips & tricks](/help/messaging-tips)
-* [Keyboard shortcuts](/help/keyboard-shortcuts)
