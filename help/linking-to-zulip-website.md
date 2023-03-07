@@ -5,7 +5,9 @@
 If your organization is sponsored by Zulip, or wishes to express appreciation
 for the Zulip project, please help others find out about Zulip. To do so, follow the
 guidelines below to list Zulip in the appropriate section of your organization's
-website (e.g., **Sponsors** or **Acknowledgements**).
+website (e.g., **Sponsors** or **Acknowledgements**). In addition to providing
+information for visitors to your site, this helps everyone find Zulip in Google
+and other search engines.
 
 ## Link to the Zulip website
 

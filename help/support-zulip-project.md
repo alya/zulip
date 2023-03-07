@@ -3,7 +3,7 @@
 {!supporting-zulip-motivation.md!}
 
 The Zulip community (which includes you!) is a huge part of what makes Zulip
-successful. If you appreciate Zulip, there are many different ways you can
+successful. If you appreciate Zulip, there are many ways you can
 support the project. Some of these will only take a few minutes of your
 time, but still make a big difference.
 
@@ -29,15 +29,20 @@ time, but still make a big difference.
 You can sponsor Zulip through the [GitHub sponsors
 program](https://github.com/sponsors/zulip) (preferred), on
 [Patreon](https://patreon.com/zulip), or on [Open
-Collective](https://opencollective.com/zulip).
+Collective](https://opencollective.com/zulip). Zulip receives sponsorships from
+individuals and organizations.
 
 ## Help others find Zulip
 
-* [**Link to Zulip**](/help/linking-to-zulip-website) from your organization's
-  website.
+* **Link to Zulip** from your organization's website. In addition to providing
+  information for visitors to your site, this helps everyone find Zulip in
+  Google and other search engines. See [Linking to the Zulip
+  website](/help/linking-to-zulip-website) for details.
 
 * [**List your organization**](/help/communities-directory) in the [Zulip
-  communities directory](https://zulip.com/communities/).
+  communities directory](https://zulip.com/communities/). Browsing open
+  communities helps people see how others are using Zulip, and learn best
+  practices.
 
 * **Star** Zulip on GitHub. There are four main repositories:
   [server/web](https://github.com/zulip/zulip),
@@ -46,8 +51,10 @@ Collective](https://opencollective.com/zulip).
   [Python API](https://github.com/zulip/python-zulip-api).
 
 * **Review** Zulip on product comparison websites, such as
-  [Capterra](https://reviews.capterra.com/new/197945)
-  and [G2](https://www.g2.com/products/zulip/take_survey).
+  [Capterra](https://reviews.capterra.com/new/197945) and
+  [G2](https://www.g2.com/products/zulip/take_survey). Organizations often rely
+  on review sites when choosing software for their team, and sharing your
+  experience helps them evaluate whether Zulip may fit their needs.
 
 !!! tip ""
     For a limited time, you can receive a $15 gift card by leaving a Capterra
@@ -67,22 +74,27 @@ Collective](https://opencollective.com/zulip).
 
 * [**Report
   issues**](https://zulip.readthedocs.io/en/latest/contributing/contributing.html#reporting-issues),
-  including both feature requests and bug reports.
+  including both feature requests and bug reports. Many improvements to the
+  Zulip app start with a user's suggestion.
 
 * [**Give
   feedback**](https://zulip.readthedocs.io/en/latest/contributing/contributing.html#user-feedback)
   if you are evaluating or using Zulip.
 
 * [**Translate**](https://zulip.readthedocs.io/en/latest/translating/translating.html)
-  Zulip into your language.
+  Zulip into your language. Zulip has been translated into over 25 languages by
+  an amazing group of volunteers, and you can help expand, improve, and
+  maintain the translation for your language.
 
 * [**Contribute
   code**](https://zulip.readthedocs.io/en/latest/contributing/contributing.html)
-  to the Zulip open-source project.
+  to the Zulip open-source project. To make it easy for contributors from a
+  variety of backgrounds to get started, Zulip has invested into making the code
+  base uniquely readable, well tested, and easy to modify.
 
 ## Related articles
 
 * [Zulip project values](https://zulip.com/values/)
-* [Linking to Zulip](/help/linking-to-zulip-website)
+* [Linking to the Zulip website](/help/linking-to-zulip-website)
 * [Zulip communities directory](/help/communities-directory)
 * [Contact Zulip](/help/contact-support)
