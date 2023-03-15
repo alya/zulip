@@ -1,10 +1,12 @@
 # Emoji and emoticons
 
-## Add emoji to a message
+{!emoji-and-emoticons-intro.md!}
 
-There are several ways to add emoji to a message: typing emoji codes,
-selecting from an emoji picker, using emoticons, or pasting from another
-site.
+## Examples
+
+{!emoji-and-emoticons-examples.md!}
+
+## Add emoji to a message
 
 ### Type an emoji code
 
