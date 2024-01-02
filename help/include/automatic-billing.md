@@ -17,20 +17,33 @@ whenever you need additional licenses.
   period. Each month, you will see a single invoice covering all
   licenses added that month.
 
-For example, suppose you start a billing month on a monthly plan with
-15 users on Zulip Basic at $3.50/month. You'll be billed at the start
-of the month for 15 licenses ($52.50). Suppose during that billing
-month, you:
+For example, suppose you are on a monthly plan that costs $8/user/month, and
+that you do the following during the month:
 
-* Add 1 user five days before the end of the billing month. This requires
-  one additional license, for a total of 16.
-* Deactivate 4 users the next day, leaving you with 12 users and 16
-  licenses.
-* Add 6 more users on the second-to-last day of the billing month,
-  bringing you to 18 users, and requiring 2 additional licenses for a
-  total of 18.
-* Deactivate 2 users on the last day of the billing month, leaving you
-  with 16 users and 18 licenses.
+1. Add 1 user half way through the month.
+1. Deactivate 5 users the next day.
+1. Add 2 users the next day.
+
+At the end of the month you will get a single invoice that combines:
+
+- A $4 charge for adding a license half way through the month.
+- A charge for the next month, which will be $16 less than the previous month,
+  as you need 2 fewer licenses.
+
+
+
+
+Suppose during that billing month, you:
+
+1. Add 1 user five days before the end of the billing month. This requires
+   one additional license, for a total of 16. Additional charges: 
+1. Deactivate 4 users the next day, leaving you with 12 users and 16
+   licenses.
+1. Add 6 more users on the second-to-last day of the billing month,
+   bringing you to 18 users, and requiring 2 additional licenses for a
+   total of 18.
+1. Deactivate 2 users on the last day of the billing month, leaving you
+   with 16 users and 18 licenses.
 
 Then, at the end of the billing month, you'll receive a single invoice
 for 16 licenses at $3.50/month ($56, aka the initial purchase for the
