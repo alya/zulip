@@ -64,7 +64,7 @@ Django, TypeScript/JavaScript, and CSS.
   documents hundreds of issues that we've identified as important to
   the project. A great project can be 3-5 significant features around
   a theme (often, but not necessarily, an [area
-  label](https://github.com/zulip/zulip/labels); the goal will be to
+  label](https://github.com/zulip/zulip/labels)); the goal will be to
   implement and get fully merged a cluster of features with a
   meaningful impact on the project. Zulip has a lot of half-finished
   PRs, so some features might be completed by reading, understanding,
@@ -74,32 +74,30 @@ Django, TypeScript/JavaScript, and CSS.
   once we've gotten to know you and your strengths through your getting
   involved in the project.
 
-  Experts: Tim Abbott and various others.
+  Experts: Tim Abbott and various others
 
-- Recent sweeps through the Zulip server and web app tracker have
-  identified about 100 older pull requests where a previous
-  contributor did significant work towards something valuable, and
-  there's significant feedback from maintainers, but the project was
-  never finished. These are tracked via the [completion candidate
-  label][completion-candidate]. One of our goals for this summer's
-  GSoC is to complete many of these issues. Start by picking something
-  that's interesting to you and you feel you have the skills required
-  to complete, reading the code and the feedback, and then creating
-  your own PR for the issue, doing your own careful testing and
-  cross-linking the original work. Remember to credit the original
+- Recent sweeps through the Zulip server and web app tracker have identified
+  about 100 open pull requests where a previous contributor did significant work
+  towards something valuable, and there's significant feedback from maintainers,
+  but the project was never finished. These are tracked via the [completion
+  candidate label][completion-candidate]. One of our goals for this summer's
+  GSoC is to complete many of these issues. Start by picking something that's
+  interesting to you, and you feel you have the skills required to complete.
+  Read the code and the feedback, and then create your own PR for the issue. Be
+  sure you explain how you've addressed the feedback on the original PR, and
+  cross-link wherever it's helpful. Remember to carefully test your work (there
+  may be problems that the reviewers missed!), and credit the original
   contributor [as documented in our commit
-  guidelines](../contributing/commit-discipline.md). We expect to have
-  a more detailed guide on this process available by summer.
-
-  **Skills requests**: Varies with project; a common skill will be
-  good reading comprehension and organization/communication skills, to
-  walk maintainers through how you resolved problems, addressed any
-  pending feedback on the previous PR, and your understanding of the
-  outstanding questions for a given project. Taking the time to get
-  really good at resolving merge conflicts is likely to be valuable
+  guidelines](../contributing/commit-discipline.md). We expect to have a more
+  detailed guide on this process available by summer. **Skills required**:
+  Varies with project; a common skill will be good reading comprehension and
+  organization/communication skills, to walk maintainers through how you
+  resolved problems, addressed any pending feedback on the previous PR, and your
+  understanding of the outstanding questions for a given project. Taking the
+  time to get really good at resolving merge conflicts is likely to be valuable
   here as well.
 
-  Experts: Tim Abbott and various others.
+  Experts: Tim Abbott and various others
 
 [completion-candidate]: https://github.com/zulip/zulip/pulls?q=is%3Aopen+is%3Apr+label%3A%22completion+candidate%22
 
@@ -137,9 +135,9 @@ Django, TypeScript/JavaScript, and CSS.
   prior Pydantic experience required, but please take the time to go
   through the Pydantic upstream tutorials and skim all the existing
   endpoints using `typed_endpoint` before doing your first Zulip
-  changes (likely to migrate a smaller views file to the new
+  changes. A good first PR is to migrate a smaller views file to the new
   framework; one commit per smaller file is likely to be a good
-  structure). See the last commits from [the new framework's main
+  structure. See the last commits from [the new framework's main
   PR](https://github.com/zulip/zulip/pull/26365) for examples of
   well-written migration commits.
 
@@ -182,8 +180,7 @@ Django, TypeScript/JavaScript, and CSS.
 
 - Migrate Zulip's [direct message recipient data
   structures](https://github.com/zulip/zulip/issues/25713) to a new
-  model with better performance characteristics and that more
-  importantly enables personal settings associated with a direct
+  model that enables personal settings associated with a direct
   message conversation, and add several settings (see the linked
   issues) enabled by that infrastructure work. **Skills required**:
   This project will be deep Python 3/PostgreSQL work. Concretely,
@@ -194,18 +191,16 @@ Django, TypeScript/JavaScript, and CSS.
 
   Experts: Tim Abbott, Mateusz Mandera, Prakhar Pratyush
 
-- Add the core infrastructure for topic-based permissions and settings
-  like [pinned topics](https://github.com/zulip/zulip/issues/19483)
-  and [read-only topics](https://github.com/zulip/zulip/issues/26944),
-  and then build some of those settings. This project will be a
-  mixture of Python 3/PostgreSQL work, including thinking about
-  database transactions and races, writing database migrations
-  intended to be run live at scale, and complex logic to handle moving
-  messages correctly in the context of these settings, including
-  significant changes to the Zulip API and API documentation.
-
-  **Skills required**: A high level of fluency with writing readable
-  Python 3 and thinking about corner cases.
+- Add the core infrastructure for topic-based permissions and settings like
+  [pinned topics](https://github.com/zulip/zulip/issues/19483) and [read-only
+  topics](https://github.com/zulip/zulip/issues/26944), and then build some of
+  those settings. This project will be a mixture of Python 3/PostgreSQL work,
+  including thinking about database transactions and races, writing database
+  migrations intended to be run live at scale, and complex logic to handle
+  moving messages correctly in the context of these settings, including
+  significant changes to the Zulip API and API documentation. **Skills
+  required**: A high level of fluency with writing readable Python 3 and
+  thinking about corner cases.
 
   Experts: Tim Abbott, Prakhar Pratyush
 
