@@ -159,6 +159,12 @@ test("get_conversations", ({override}) => {
     set_pm_with_filter("iago@zulip.com");
     pm_data = pm_list_data.get_conversations();
     assert.deepEqual(pm_data, expected_data);
+
+    pm_data = pm_list_data.get_conversations("Ali");
+    assert.deepEqual(
+        pm_data,
+        expected_data.filter((item) => item.recipients === "Alice, Bob"),
+    );
 });
 
 test("get_conversations bot", ({override}) => {

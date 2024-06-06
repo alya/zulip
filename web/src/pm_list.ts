@@ -39,8 +39,11 @@ export function close(): void {
 }
 
 export function _build_direct_messages_list(): vdom.Tag<PMNode> {
-    const conversations = pm_list_data.get_conversations();
-    const pm_list_info = pm_list_data.get_list_info(zoomed);
+    const $filter = $(".direct-messages-list-filter").expectOne();
+    const search_term = ($filter.val() ?? "").toString();
+
+    const conversations = pm_list_data.get_conversations(search_term);
+    const pm_list_info = pm_list_data.get_list_info(zoomed, search_term);
     const conversations_to_be_shown = pm_list_info.conversations_to_be_shown;
     const more_conversations_unread_count = pm_list_info.more_conversations_unread_count;
 
@@ -201,11 +204,25 @@ function zoom_in(): void {
 
 function zoom_out(): void {
     zoomed = false;
-    update_private_messages();
+    if (!clear_search()) {
+        update_private_messages();
+    }
     $(".direct-messages-container").removeClass("zoom-in").addClass("zoom-out");
     $("#streams_list").show();
     $(".left-sidebar .right-sidebar-items").show();
 }
+
+export function clear_search(): boolean {
+    const $filter = $(".direct-messages-list-filter").expectOne();
+    if ($filter.val() !== "") {
+        $filter.val("");
+        update_private_messages();
+        return true;
+    }
+    return false;
+}
+
+const throttled_update_private_message = _.throttle(update_private_messages, 50);
 
 export function initialize(): void {
     $(".direct-messages-container").on("click", "#show-more-direct-messages", (e) => {
@@ -220,5 +237,19 @@ export function initialize(): void {
         e.preventDefault();
 
         zoom_out();
+    });
+
+    $(".direct-messages-container").on("input", ".direct-messages-list-filter", (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+
+        throttled_update_private_message();
+    });
+
+    $(".direct-messages-container").on("click", "#clear_direct_messages_search_button", (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+
+        clear_search();
     });
 }

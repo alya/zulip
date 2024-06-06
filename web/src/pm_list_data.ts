@@ -8,6 +8,7 @@ import * as pm_conversations from "./pm_conversations";
 import * as unread from "./unread";
 import * as user_status from "./user_status";
 import type {UserStatusEmojiInfo} from "./user_status";
+import * as util from "./util";
 
 // Maximum number of conversation threads to show in default view.
 const max_conversations_to_show = 8;
@@ -44,7 +45,7 @@ type DisplayObject = {
     is_bot: boolean;
 };
 
-export function get_conversations(): DisplayObject[] {
+export function get_conversations(search_term = ""): DisplayObject[] {
     const direct_messages = pm_conversations.recent.get();
     const display_objects = [];
 
@@ -58,7 +59,13 @@ export function get_conversations(): DisplayObject[] {
         direct_messages.unshift({user_ids_string: active_user_ids_string, max_message_id: -1});
     }
 
-    for (const conversation of direct_messages) {
+    const filtered_direct_messages = util.filter_by_word_prefix_match(
+        direct_messages,
+        search_term,
+        (item) => people.get_recipients(item.user_ids_string),
+    );
+
+    for (const conversation of filtered_direct_messages) {
         const user_ids_string = conversation.user_ids_string;
         const reply_to = people.user_ids_string_to_emails_string(user_ids_string);
         assert(reply_to !== undefined);
@@ -104,11 +111,14 @@ export function get_conversations(): DisplayObject[] {
 }
 
 // Designed to closely match topic_list_data.get_list_info().
-export function get_list_info(zoomed: boolean): {
+export function get_list_info(
+    zoomed: boolean,
+    search_term = "",
+): {
     conversations_to_be_shown: DisplayObject[];
     more_conversations_unread_count: number;
 } {
-    const conversations = get_conversations();
+    const conversations = get_conversations(search_term);
 
     if (zoomed || conversations.length <= max_conversations_to_show) {
         return {
