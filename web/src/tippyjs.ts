@@ -475,7 +475,7 @@ export function initialize(): void {
                 return false;
             }
 
-            if ($("#toggle_private_messages_section_icon").hasClass("fa-caret-down")) {
+            if ($("#toggle_direct_messages_section_icon").hasClass("fa-caret-down")) {
                 instance.setContent(
                     $t({
                         defaultMessage: "Collapse direct messages",
