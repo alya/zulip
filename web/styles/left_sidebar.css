@@ -244,7 +244,7 @@ li.show-more-topics {
             align-items: center;
         }
 
-        #show_all_private_messages {
+        #show_all_direct_messages {
             width: var(--left-sidebar-header-icon-width);
             display: flex;
             align-items: center;

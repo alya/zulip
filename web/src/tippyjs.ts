@@ -139,7 +139,7 @@ export function initialize(): void {
     // thus hovering it is a way to find out what it does, give
     // it the faster LONG_HOVER_DELAY.
     tippy.delegate("body", {
-        target: "#show_all_private_messages",
+        target: "#show_all_direct_messages",
         placement: "right",
         delay: LONG_HOVER_DELAY,
         appendTo: () => document.body,
